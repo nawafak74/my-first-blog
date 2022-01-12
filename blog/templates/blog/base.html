@@ -10,6 +10,7 @@
     <body>
         <body>
             <div class="page-header">
+        
                 {% if user.is_authenticated %}
                     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                     <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
@@ -19,6 +20,19 @@
                 {% endif %}
                 <h1><a href="/">Plants for U</a></h1>
             </div>
+
+            <div class="top-menu" style="float:right">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                <h3> {{ request.user }} | <a href="/admin/logout?next=/">Log out</a> </h3>
+                {% else %}
+                <h3> <a href="{% url 'login' %}">Log in</a> </h3>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% endif %}
+            </div>
+
             <div class="content container">
                 <div class="row">
                     <div class="col-md-8">
