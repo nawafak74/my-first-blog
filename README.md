@@ -5,7 +5,7 @@
 
 1-You need to install the latest version of python and Django.
 
-2-make sure you are in the plantsforu directory .
+2-make sure you are in the plantsforu directory either from zip file or git clone https://github.com/nawafak74/my-first-blog.git
 
 3-Start the virtual machine by running:
 
@@ -32,3 +32,5 @@ please find the deployed app on plantsforu.pythonanwyhere.com or nawafak74.pytho
 please log in to the system to access features using 
 username: plantsforu 
 password: csc3131bs
+
+
